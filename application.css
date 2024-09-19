@@ -1,0 +1,27 @@
+.title {
+  padding: 0px 0px 10px 0px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.counter {
+  font-size: 10px;
+}
+
+.containerInputBtn {
+  width: 700px;
+  margin: 20px auto;
+}
+
+.container {
+  width: 700px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.btnCenter {
+  text-align: center;
+}

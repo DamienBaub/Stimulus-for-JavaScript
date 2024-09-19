@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stimulus JS</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="application.css">
+
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <h1 class="title ">Stimulus JS</h1>
+
+    <div class="container">
+      <form class="checklist" data-controller="checklist">
+        <h2 class="title">Checkbox</h2>
+        <div class="form-check">
+          <input id="check-all" type="checkbox" class="form-check-input" data-action="change->checklist#checkAll">
+          <label for="check-all">Check all</label>
+        </div>
+        <hr>
+        <div>
+          <div class="form-check">
+            <input id="checkbox-appartment" type="checkbox" class="form-check-input" data-checklist-target="checkbox">
+            <label for="checkbox-appartment">Appartment 🏢</label>
+          </div>
+          <div class="form-check">
+            <input id="checkbox-house" type="checkbox" class="form-check-input" data-checklist-target="checkbox">
+            <label for="checkbox-house">House 🏡</label>
+          </div>
+          <div class="form-check">
+            <input id="checkbox-igloo" type="checkbox" class="form-check-input" data-checklist-target="checkbox">
+            <label for="checkbox-igloo">Igloo 🧊</label>
+          </div>
+          <div class="form-check">
+            <input id="checkbox-cabin" type="checkbox" class="form-check-input" data-checklist-target="checkbox">
+            <label for="checkbox-cabin">Cabin 🌳</label>
+          </div>
+      </div>
+    </form>
+  </div>
+
+    <div class="container" data-controller="character-counter" data-character-counter-limit-value="150">
+      <h2 class="title">Character Count</h2>
+      <textarea rows="3" placeholder="Type something" class="form-control mb-2" data-action="keyup->character-counter#updateCounter"></textarea>
+      <p class="counter" data-character-counter-target="counter"></p>
+    </div>
+
+    <div class="container">
+      <h2 class="title">Clipboard</h2>
+      <div class="containerInputBtn input-group w-50" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+        <input class="form-control" data-clipboard-target="input" type="text" value="0628aea3-48f6-4183-80be-c5def07939f2" readonly>
+        <div class="input-group-append cont">
+          <button class="btn btn-outline-primary" data-action="click->clipboard#copy">Copy to Clipboard</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="btnCenter">
+        <button id="clickme" class="btn btn-primary btn-lg" data-controller="event-listener" data-action="click->event-listener#disable">
+          Click me!
+        </button>
+      </div>
+    </div>
+
+    <script src="lib/index.js" type="module"></script>
+  </body>
+</html>
