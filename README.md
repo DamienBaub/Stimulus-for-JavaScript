@@ -1,5 +1,11 @@
-<h1># StimulusJS</h1>
-Quick implementation of Stimulus for a checkbox, character counter, clipboard, and button
+<h1># Stimulus</h1>
+<p>Components for JavaScript utilising Stimulus</p>
+<ul>
+  <li>Checkbox</li>
+  <li>Character counter</li>
+  <li>Clipboard</li>
+  <li>Button</li>
+</ul>
 
 <h2>Check All Checkboxes</h2>
 
@@ -19,4 +25,4 @@ Quick implementation of Stimulus for a checkbox, character counter, clipboard, a
 <h2>Button</h2>
 
 <img width="745" alt="image" src="https://github.com/user-attachments/assets/1e07f5a7-d5c5-4ceb-a6cf-4a76dfc42adb">
-<p>Manipulate the DOM using Stimulus JS to disable the button, change the text, and play a sound.</p>
+<p>Manipulate the DOM using Stimulus to disable the button, change the text, and play a sound.</p>
